@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
         UserManager userManager = new UserManager();
         Scanner scanner = new Scanner(System.in);
+        AssetManager assetManager = new AssetManager();
 
         while (true) {
             System.out.println("1. Sign Up");
             System.out.println("2. Sign In");
             System.out.println("3. Exit");
+            System.out.println("4. Add Asset");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // consume newline
@@ -32,6 +34,8 @@ public class Main {
             } else if (choice == 3) {
                 System.out.println("Goodbye!");
                 break;
+            } else if (choice == 4) {
+                assetManager.addAsset();
             } else {
                 System.out.println("Invalid option.");
             }
