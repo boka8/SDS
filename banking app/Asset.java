@@ -1,7 +1,7 @@
 public class Asset {
-    private String type; // Stocks, Real Estate, Crypto, Gold
-    private String name; // e.g., Stock symbol, property name, etc.
-    private float amount; // e.g., number of shares, value, etc.
+    private String type;
+    private String name;
+    private float amount;
 
     public Asset(String type, String name, float amount) {
         this.type = type;
@@ -9,5 +9,9 @@ public class Asset {
         this.amount = amount;
     }
 
-    // Getters and setters...
+    public String getType() { return type; }
+    public String getName() { return name; }
+    public float getAmount() { return amount; }
+    public void setName(String name) { this.name = name; }
+    public void setAmount(float amount) { this.amount = amount; }
 }
